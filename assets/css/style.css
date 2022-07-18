@@ -424,14 +424,33 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
-  background: white;
+  /* background: white; */
   width: 80%;
   left: 10%;
   position: relative;
 }
 
-.section-bg {
+.ourVision{
+  background: linear-gradient(180deg, rgba(35,102,121,1) 0%, rgba(2,18,21,1) 100%);
+  color: #fff;
+  position: relative;
+}
+.ourVision h3{
+  color: #fff;
+  margin-top: 15%;
+}
+
+
+/* .section-bg {
   background-color: #f9f9fa;
+} */
+.whiteBackground{
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+.gradBackground{
+  background: linear-gradient(180deg, rgba(35,102,121,1) 0%, rgba(2,18,21,1) 100%);
+
 }
 
 .section-title {
@@ -570,7 +589,8 @@ section {
   border: 1px solid #fff;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
-  background: #fff;
+  background: linear-gradient(180deg, rgba(35,102,121,1) 0%, rgba(2,18,21,1) 100%);
+  width: 100%;
 }
 .services .icon-box .icon {
   margin: 0 auto;
@@ -579,13 +599,16 @@ section {
   justify-content: center;
   margin-bottom: 20px;
   transition: ease-in-out 0.3s;
+  color: #fff;
+  
 }
 .services .icon-box .icon i {
-  color: var(--lightBlue);
-  font-size: 36px;
+  
+  font-size: 100px;
   transition: 0.3s;
 }
 .services .icon-box h4 {
+  
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
@@ -593,6 +616,8 @@ section {
 .services .icon-box h4 a {
   color: #5f687b;
   transition: ease-in-out 0.3s;
+  color: #fff;
+
 }
 .services .icon-box p {
   line-height: 24px;
