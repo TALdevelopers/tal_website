@@ -9,11 +9,17 @@
 # General
 --------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap');
 :root {
   --lightBlue: #236679;
   --darkBlue: #143943;
   --white: #fff;
   --black:#000 ;
+}
+
+*{
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 300;
 }
 
 
@@ -43,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
-  right: 15px;
+  right: 5px;
   bottom: 15px;
   z-index: 996;
   background: var(--lightBlue);
@@ -74,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(180deg, rgba(35,102,121,1) 0%, rgba(2,18,21,1) 100%);
   transition: all 0.5s;
   z-index: 997;
-  padding: 20px 0;
+  padding: 5px 0;
 }
 #header.header-scrolled {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -123,10 +129,10 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
-  font-family: "Raleway", sans-serif;
+  padding: 25px 0 0px 30px;
+  font-family: "Roboto Slab", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 300;
   color: var(--white);
   white-space: nowrap;
   transition: 0.3s;
@@ -316,7 +322,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  color: #3e4450;
+  color: #000;
 }
 #hero h2 {
   color: #858ea1;
@@ -434,6 +440,7 @@ section {
   background: linear-gradient(180deg, rgba(35,102,121,1) 0%, rgba(2,18,21,1) 100%);
   color: #fff;
   position: relative;
+  border-radius: 15px;
 }
 .ourVision h3{
   color: #fff;
@@ -455,7 +462,7 @@ section {
 
 .section-title {
   text-align: center;
-  padding: 30px 0;
+  padding: 10px 0;
   position: relative;
 }
 .section-title h2 {
@@ -496,7 +503,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Featured Services
+# About us + featured Services
 --------------------------------------------------------------*/
 .featured-services {
   padding: 0;
@@ -505,16 +512,18 @@ section {
 
 }
 .featured-services .icon-box {
-  padding: 20px;
+  padding: 0 60px;
   color: #5f687b;
   /* background: #f9f9fa; */
   background-image: url("/assets/img/worldmap.png");
   background-size: contain;
+  background-repeat: repeat-x;
 
   /* border-radius: 4px; */
   /* border: 1px solid #f9f9fa; */
   transition: 0.3s;
   height: 100%;
+  
 }
 .featured-services .icon {
   margin: 0 0 15px 0;
@@ -542,6 +551,37 @@ section {
   line-height: 24px;
   font-size: 14px;
 }
+
+
+
+
+/*--------------------------------------------------------------
+# privacy
+--------------------------------------------------------------*/
+
+
+.featured-services-privacy .icon-box {
+  padding: 20px;
+  color: #5f687b;
+  /* background: #fff; */
+
+  /* border-radius: 4px; */
+  /* border: 1px solid #f9f9fa; */
+  padding: 0 60px;
+  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  
+}
+.backgroundPrivacy{
+  background-image: url("/assets/img/00000.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # About
@@ -593,11 +633,13 @@ section {
 .services .icon-box {
   text-align: center;
   border: 1px solid #fff;
-  padding: 80px 20px;
+  padding: 45px 20px;
   transition: all ease-in-out 0.3s;
   background: linear-gradient(180deg, rgba(35,102,121,1) 0%, rgba(2,18,21,1) 100%);
-  width: 100%;
+  width: 90%;
   height: 85%;
+  border-radius: 15px;
+
 }
 .services .icon-box .icon {
   margin: 0 auto;
@@ -611,7 +653,7 @@ section {
 }
 .services .icon-box .icon i {
   
-  font-size: 100px;
+  font-size: 80px;
   transition: 0.3s;
 }
 .services .icon-box h4 {
@@ -620,7 +662,7 @@ section {
   margin-bottom: 15px;
   font-size: 24px;
 }
-.services .icon-box h4 a {
+.services .icon-box a {
   color: #5f687b;
   transition: ease-in-out 0.3s;
   color: #fff;
@@ -634,7 +676,7 @@ section {
 .services .icon-box:hover {
   border-color: #eaecef;
 }
-.services .icon-box:hover h4 a {
+.services .icon-box:hover p a {
   color: var(--lightBlue);
 }
 

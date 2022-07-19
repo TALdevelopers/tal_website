@@ -40,12 +40,44 @@
 
 <body>
 
+  <!-- Messenger Chat plugin Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Chat plugin code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "102982105830424");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v14.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
       <!-- <h1 class="logo"><a href="index.html">TAL</a></h1> -->
-      <a href="index.html"> <img style="height:90px;" src="assets/img/tal_logo.png" alt=""/></a> 
+      <a href="index.html"> <img style="height:120px;" src="assets/img/tal_logo.png" alt=""/></a> 
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -74,7 +106,7 @@
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
           <h1>Tech Analytica Limited</h1>
-          <h2>We are team of talented designers making websites with Bootstrap</h2>
+          <!-- <h2>We are team of talented designers making websites with Bootstrap</h2> -->
           <div class="d-flex">
             <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
             <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
@@ -123,7 +155,7 @@
     <!-- End Featured Services Section -->
 
     <!-- ======= about Section ======= -->
-    <section id="featured-services" class="featured-services mt-5 mb-5">
+    <section id="about" class="featured-services mt-5 mb-5">
       <div class="container">
 
         <div class="row">
@@ -135,7 +167,7 @@
                 <h2>About us</h2>
                 <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
               </div>
-              <p class="description" style="color: #5f687b; font-size:17px;">Tech Analytica Limited is one of the most promising IT Services providers in Bangladesh dedicated to delivering complete IT solutions to its clients, whether they are start-up operations or large corporations. Our receptive approach makes us understand the stipulation in business and gives us the work force in meeting the necessity to accomplishing the goal. <br/> <br/>
+              <p class="description" style="color: #000; font-size:17px;">Tech Analytica Limited is one of the most promising IT Services providers in Bangladesh dedicated to delivering complete IT solutions to its clients, whether they are start-up operations or large corporations. Our receptive approach makes us understand the stipulation in business and gives us the work force in meeting the necessity to accomplishing the goal. <br/> <br/>
                 In addition to having our head office in Bangladesh, we also have our sales office in Canada and ascending toward becoming a paramount business house both locally and internationally. Reliability is our trademark and business relationship are our strength. The company’s high level of productivity and performance is supported by a group of motivated staff and demand structured hardware setup. <br/> <br/>
               
                 To Tech Analytica Limited, sky is not the limit, thus we continually welcome new opportunities to fulfil the increasing demand in the IT industry worldwide. </p>
@@ -156,25 +188,11 @@
           <div class="col-lg-6">
             <img src="assets/img/about.png" class="img-fluid" alt="">
           </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 content ourVision p-3">
-            <h3 class="text-center pt-2 text-white">Our Vision</h3>
+          <div class="col-lg-6 pt-lg-0 content ourVision p-3">
+            <h3 class="text-center text-white">Our Vision</h3>
             <p class="" style="text-align: justify;">
               To be an organization that continually delights the customers and all stakeholders by providing the most advantageous IT services and solutions with a constant eye on innovation and by such becoming the optimum choice to the customers and clients locally as well as internationally. 
             </p>
-
-
-           
-            
-            
-            <!-- <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda</li>
-            </ul> -->
-            <!-- <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.
-            </p> -->
           </div>
         </div>
 
@@ -228,48 +246,53 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-shop"></i></div>
-              <h4><a>E-Commerce</a></h4>
+              <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+              <p class="text-white" style="font-size: 20px;"><a>E-Commerce</a></p>
               <!-- <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-md-0">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-clipboard-heart"></i></div>
-              <h4><a>HealthTech</a></h4>
+              <div class="icon"><i class="fa-solid fa-stethoscope"></i></div>
+              <p class="text-white" style="font-size: 20px;"><a>HealthTech</a></p>
+              <!-- <h4><a>HealthTech</a></h4> -->
               <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-file-earmark-lock"></i></div>
-              <h4><a>DRM Solutions</a></h4>
+              <div class="icon"><i class="fa-solid fa-film"></i></div>
+              <!-- <h4><a>DRM Solutions</a></h4> -->
+              <p class="text-white" style="font-size: 20px;"><a>DRM Solutions</a></p>
               <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-fingerprint"></i></div>
-              <h4><a>Security & Biometric</a></h4>
+              <div class="icon"><i class="fa-solid fa-fingerprint"></i></div>
+              <p class="text-white" style="font-size: 20px;"><a>Security & Biometric</a></p>
+              <!-- <h4><a>Security & Biometric</a></h4> -->
               <!-- <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-router"></i></div>
-              <h4><a >IoT</a></h4>
+              <div class="icon"><i class="fa-solid fa-cloud"></i></div>
+              <p class="text-white" style="font-size: 20px;"><a>IoT</a></p>
+              <!-- <h4><a >IoT</a></h4> -->
               <!-- <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p> -->
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-phone"></i></div>
-              <h4><a >Mobile App <br> (Ios & Android)</a></h4>
+              <div class="icon"><i class="fa-solid fa-mobile-button"></i></div>
+              <p class="text-white" style="font-size: 20px;"><a>Mobile App <br> (Ios & Android)</a></p>
+              <!-- <h4><a >Mobile App <br> (Ios & Android)</a></h4> -->
               <!-- <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p> -->
             </div>
           </div>
@@ -293,48 +316,54 @@
           <div class="row">
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-code-square"></i></div>
-                <h4><a>Software Development</a></h4>
+                <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <!-- <h4><a>Software Development</a></h4> -->
+                <p class="text-white" style="font-size: 20px;"><a>Software Development</a></p>
                 <!-- <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p> -->
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-globe"></i></div>
-                <h4><a>Web Development</a></h4>
+                <div class="icon"><i class="fa-solid fa-globe"></i></div>
+                <!-- <h4><a>Web Development</a></h4> -->
+                <p class="text-white" style="font-size: 20px;"><a>Web Development</a></p>
                 <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p> -->
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-gear"></i></div>
-                <h4><a>System Integration</a></h4>
+                <div class="icon"><i class="fa-solid fa-gears"></i></div>
+                <!-- <h4><a>System Integration</a></h4> -->
+                <p class="text-white" style="font-size: 20px;"><a>System Integration</a></p>
                 <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-headset"></i></div>
-                <h4><a>IT Support & Services</a></h4>
+                <div class="icon"><i class="fa-solid fa-user-gear"></i></div>
+                <!-- <h4><a>IT Support & Services</a></h4> -->
+                <p class="text-white" style="font-size: 20px;"><a>IT Support & Services</a></p>
                 <!-- <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p> -->
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-robot"></i></div>
-                <h4><a>AI Driven Development</a></h4>
+                <div class="icon"><i class="fa-solid fa-brain"></i></div>
+                <!-- <h4><a>AI Driven Development</a></h4> -->
+                <p class="text-white" style="font-size: 20px;"><a>AI Driven Development</a></p>
                 <!-- <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p> -->
               </div>
             </div>
   
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
               <div class="icon-box">
-                <div class="icon"><i class="bi bi-cart-check"></i></div>
-                <h4><a>Online Marketing</a></h4>
+                <div class="icon"><i class="fa-solid fa-bullhorn"></i></div>
+                <!-- <h4><a>Online Marketing</a></h4> -->
+                <p class="text-white" style="font-size: 20px;"><a>Online Marketing</a></p>
                 <!-- <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p> -->
               </div>
             </div>
@@ -570,7 +599,7 @@
     <!-- End Cta Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg whiteBackground">
+    <!-- <section id="team" class="team section-bg whiteBackground">
       <div class="container">
 
         <div class="section-title">
@@ -634,8 +663,42 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
     <!-- End Team Section -->
+
+
+
+      <!-- ======= privacy Section ======= -->
+      <section id="featured-services" class="featured-services-privacy  mt-5 mb-5 bg-white">
+        <div class="container backgroundPrivacy">
+  
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="icon-box " style="text-align: justify;">
+                <!-- <div class="icon"><i class="bi bi-laptop"></i></div> -->
+                <div class="section-title">
+                  <span>Privacy Protection</span>
+                  <h2>Privacy Protection</h2>
+                  <!-- <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p> -->
+                </div>
+                <p class="description" style="color: #000; font-size:17px;">At Tech Analytica, we are fully committed to the ethical practice of intellectual property protection, and ensure to protect the assets of our clients through strict company policy and intellectual property protection acts including:
+                </p>
+                <ul style="list-style: none; color:black; font-size:17px">
+              <li><i class="bi bi-check-circle"></i> Execution of a comprehensive non-disclosure agreement</li>
+              <li><i class="bi bi-check-circle"></i> Signing of non-disclosure agreement on patent of intellectual property</li>
+              <li><i class="bi bi-check-circle"></i> Agreement to any ownership waiver agreements</li>
+              <li><i class="bi bi-check-circle"></i> Constant monitoring of employee activities in line with company policy</li>
+            </ul>
+              </div>
+            </div>
+            
+          </div>
+  
+        </div>
+      </section>
+       <!-- End privacy Section -->
+
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact whiteBackground">
@@ -722,7 +785,7 @@
         <div class="row  justify-content-center">
           <div class="col-lg-6">
             <h3>Tech Analytica Limited</h3>
-            <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+            <!-- <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p> -->
           </div>
         </div>
 
@@ -735,11 +798,12 @@
         </div>
         
         <div class="social-links">
-          <a href="#" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://twitter.com/AnalyticaTech" target="_blank" class="twitter"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/techanalyticaltd" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
           <!-- <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> -->
           <a href="https://wa.me/01737379717" target="_blank" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
           <a href="https://www.linkedin.com/company/tech-analytica-limited/mycompany/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.youtube.com/channel/UC3gJ3prQiT0rAPr_c9775DA" target="_blank" class="linkedin"><i class="bx bxl-youtube"></i></a>
         </div>
 
       </div>
