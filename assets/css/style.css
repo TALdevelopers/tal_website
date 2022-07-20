@@ -525,6 +525,19 @@ section {
   height: 100%;
   
 }
+.featured-services .icon-box2{
+  padding: 0 0px;
+  color: #5f687b;
+  /* background: #f9f9fa; */
+  background-image: url("/assets/img/worldmap.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+
+  /* border-radius: 4px; */
+  /* border: 1px solid #f9f9fa; */
+  transition: 0.3s;
+  height: 100%;
+}
 .featured-services .icon {
   margin: 0 0 15px 0;
 }
