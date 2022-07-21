@@ -1348,3 +1348,31 @@ section {
   left: 0;
 
 }
+
+
+
+/* youtube player */
+.youtubeplayer{
+  width: 100%;
+  justify-content: center;
+}
+
+#player{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  #player  {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  #player  {
+    width: 100%;
+    height: 100%;
+  }
+}
